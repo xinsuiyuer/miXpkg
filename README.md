@@ -3,6 +3,7 @@ It is useful in cross-compile enviroment. Sometimes after compiling from source,
 and then install on target as well.
 
 usage:
+
 1. make
 Compile sources firstly.
 2. miXpkg -s /path/to/sysroot -o /path/to/place/copied/installed/files -n package-name [args pass to make, e.g. install var1=val1]
@@ -11,6 +12,7 @@ Compile sources firstly.
 
 
 How does it work?
+
 1. Beforce miXpkg runs 'make [install | args pass to make]', it watchs at sysroot by using inotify mechanism.
 2. Run 'make [install | args pass to make]'
 3. Stop watching at sysroot, and copys files or directorys that were created into path specified by -o option.
